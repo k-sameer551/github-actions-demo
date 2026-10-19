@@ -8,5 +8,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print Message
-        run: echo "Hello, World!"
+      - name: Show Date
+        run: date
+
+      - name: Show Directory
+        run: pwd
+
+      - name: List Files
+        run: ls -la
