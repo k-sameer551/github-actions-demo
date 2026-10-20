@@ -1,15 +1,22 @@
-name: Run Python
+name: Env Demo
 
 on:
   push
 
+env:
+  APP_NAME: ShoppingApp
+  VERSION: 1.0
+
 jobs:
-  test:
+  demo:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-      
-      - name: Show Files
-        run: ls -la
+      - name: Show App
+        run: echo @APP_NAME
+
+      - name: Show Version
+        run: echo @VERSION
+
+      - name: Show All Environment Variables
+        run: echo "Hello ${{secrets.My_NAME}}"
