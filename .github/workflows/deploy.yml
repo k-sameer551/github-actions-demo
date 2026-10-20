@@ -1,11 +1,11 @@
-name: My First Workflow
+name: Run Python
 
 on:
-  push:
+  push
 
 jobs:
   python-job:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - name: Checkout Repository
@@ -17,4 +17,7 @@ jobs:
           python-version: "3.12"
 
       - name: Run Python
+        run: python --version
+
+      - name: Run App
         run: python app.py
